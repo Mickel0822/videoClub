@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSocioTable extends Migration
+class CreateSociosTable extends Migration
 {
     public function up()
     {
-        Schema::create('socio', function (Blueprint $table) {
+        Schema::create('socios', function (Blueprint $table) {
             $table->id('socId'); // Primary key
             $table->char('socCedula', 10)->unique();
             $table->string('socNombre', 60);
@@ -21,6 +21,6 @@ class CreateSocioTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('socio');
+        Schema::dropIfExists('socios');
     }
 }

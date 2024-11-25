@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGeneroTable extends Migration
+class CreateGenerosTable extends Migration
 {
     public function up()
     {
-        Schema::create('genero', function (Blueprint $table) {
+        Schema::create('generos', function (Blueprint $table) {
             $table->id('genId'); // Primary key
             $table->string('genNombre', 60);
             $table->timestamps();
@@ -17,6 +17,6 @@ class CreateGeneroTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('genero');
+        Schema::dropIfExists('generos');
     }
 }

@@ -4,19 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFormatoTable extends Migration
+class CreateDirectorsTable extends Migration
 {
     public function up()
     {
-        Schema::create('formato', function (Blueprint $table) {
-            $table->id('forId'); // Primary key
-            $table->string('forNombre', 60);
+        Schema::create('directors', function (Blueprint $table) {
+            $table->id('dirId'); // Primary key
+            $table->string('dirNombre', 60);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('formato');
+        Schema::dropIfExists('directors');
     }
 }
